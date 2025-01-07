@@ -32,7 +32,7 @@ Ce projet vise à développer une solution Blazor pour un gestionnaire de mots d
 │   └── PasswordManager.Core     # Logique métier
 ├── tests
 │   └── PasswordManager.Tests    # Tests unitaires et d'intégration
-└── README.md                    # Documentation
+└── README.md                    # Documentation avec votre **Prénom et NOM**, ainsi que les fonctionnalités réalisées
 ```
 
 ## Rendu du projet
