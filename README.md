@@ -36,7 +36,7 @@ Ce projet vise à développer une solution Blazor pour un gestionnaire de mots d
 ```
 
 ## Rendu du projet
-- dépôt sur github
+- dépôt sur github (personnel ou une branche spécifique sur celui-ci)
 
 ## Liens utiles
 - [Documentation Blazor](https://docs.microsoft.com/fr-fr/aspnet/core/blazor/)
