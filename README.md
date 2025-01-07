@@ -22,27 +22,6 @@ Ce projet vise à développer une solution Blazor pour un gestionnaire de mots d
    - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0).
    - Git pour la gestion des versions.
 
-2. **Commande pour vérifier les installations** :
-```bash
-# Vérification de la version .NET
-$ dotnet --version
-
-# Vérification de la version Git
-$ git --version
-```
-
-## Initialisation du projet
-1. **Cloner le dépôt** :
-```bash
-git clone https://github.com/Ti-Ji/Projets_Blazor.git
-cd Projets_Blazor
-```
-
-2. **Créer votre propre branche** :
-```bash
-git checkout -b release/nom-prenom1-nom-prenom2-nom-de-votre-branche
-git push --set-upstream origin release/nom-prenom1-nom-prenom2-nom-de-votre-branche
-```
 
 ## Structure du projet
 ```
@@ -55,6 +34,9 @@ git push --set-upstream origin release/nom-prenom1-nom-prenom2-nom-de-votre-bran
 │   └── PasswordManager.Tests    # Tests unitaires et d'intégration
 └── README.md                    # Documentation
 ```
+
+## Rendu du projet
+- dépôt sur github
 
 ## Liens utiles
 - [Documentation Blazor](https://docs.microsoft.com/fr-fr/aspnet/core/blazor/)
