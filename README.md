@@ -42,7 +42,7 @@ Ce projet vise à développer une solution Blazor pour un gestionnaire de mots d
 ```
 
 ## Rendu du projet
-- dépôt sur github (personnel ou une branche spécifique sur celui-ci)
+- dépôt sur github (personnel) et m'envoyer le lien par mail: [theojulien.pro@outlook.com](mailto:theojulien.pro@outlook.com?subject=[GitHub]%20Rendu%20Projet%20Blazor)
 - 28 Février 2025 à 23H59.
 
 ## Liens utiles
