@@ -43,6 +43,7 @@ Ce projet vise à développer une solution Blazor pour un gestionnaire de mots d
 
 ## Rendu du projet
 - dépôt sur github (personnel ou une branche spécifique sur celui-ci)
+- 28 Février 2025 à 23H59.
 
 ## Liens utiles
 - [Documentation Blazor](https://docs.microsoft.com/fr-fr/aspnet/core/blazor/)
