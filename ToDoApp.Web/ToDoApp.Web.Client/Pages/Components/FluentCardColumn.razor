@@ -1,0 +1,35 @@
+@inject NavigationManager NavigationManager
+<td ondrop="ToDos.drop(event)" ondragover="ToDos.allowDrop(event)" @attributes="AdditionalAttributes">
+	<ul class="no-style">
+		@if (ToDoItems != null)
+		{
+			foreach (var item in ToDoItems)
+			{
+				<FluentCard draggable="true"
+				            ondragstart="ToDos.drag(event)"
+				            id="@item.Name">
+					@item.Name (@item.Date?.ToShortDateString())
+					<button class="btn btn-primary"
+					        @onclick="() => EditItem(item)">Edit
+					</button>
+				</FluentCard>
+			}
+		}
+	</ul>
+</td>
+
+@code
+{
+	[Parameter(CaptureUnmatchedValues = true)]
+	public Dictionary<string, object>? AdditionalAttributes { get; set; }
+
+	[Parameter] public List<ToDoItem>? ToDoItems { get; set; }
+
+	[Parameter] public EventCallback<ToDoItem> OnEdit { get; set; }
+
+	private async Task EditItem(ToDoItem item)
+	{
+		await OnEdit.InvokeAsync(item);
+	}
+
+}
