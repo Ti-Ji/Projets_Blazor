@@ -1,0 +1,9 @@
+.no-style {
+    all: unset;
+}
+
+.card-border {
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    vertical-align: top;
+}
