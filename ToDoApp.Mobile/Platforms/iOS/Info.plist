@@ -28,5 +28,7 @@
     </array>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/appicon.appiconset</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Cette application nécessite l'accès à la caméra pour prendre une photo.</string>
 </dict>
 </plist>

@@ -1,6 +1,30 @@
 @page "/"
 @page "/ToDoList"
 
+@inject CameraService CameraService
+
 <h3>ToDo List</h3>
 
 <ToDoComponent></ToDoComponent>
+
+<button @onclick="TakePhoto">📸 Take a Photo</button>
+
+@if (!string.IsNullOrEmpty(PhotoBase64))
+{
+	<p>✅ Photo captured successfully!</p>
+	<img src="@PhotoBase64" alt="Captured Photo" width="300"/>
+}
+
+@code {
+	private string? PhotoBase64;
+
+	private async Task TakePhoto()
+	{
+		PhotoBase64 = await CameraService.TakePhotoAsync();
+		if (string.IsNullOrEmpty(PhotoBase64))
+		{
+			Console.WriteLine("❌ No photo captured!");
+		}
+	}
+}
+
