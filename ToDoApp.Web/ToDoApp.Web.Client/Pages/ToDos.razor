@@ -2,38 +2,4 @@
 
 <h3>ToDo List</h3>
 
-<button class="btn btn-success" @onclick="AddToDoItem">Add ToDo</button>
-
-<div class="d-flex flex-row">
-	<table class="flex-grow-1 flex-fill">
-		<thead>
-		<tr>
-			<th style="width: 33%">Not Started</th>
-			<th style="width: 33%">In Progress</th>
-			<th style="width: 33%">Completed</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr class="height">
-			<FluentCardColumn class="card-border"
-			                  OnEdit="@SetItem"
-			                  ToDoItems="@(ToDoItems.Where(i => i.Status == TodoStatus.NotStarted).ToList())"></FluentCardColumn>
-			<FluentCardColumn class="card-border"
-			                  OnEdit="@SetItem"
-			                  ToDoItems="@(ToDoItems.Where(i => i.Status == TodoStatus.InProgress).ToList())"></FluentCardColumn>
-			<FluentCardColumn class="card-border"
-			                  OnEdit="@SetItem"
-			                  ToDoItems="@(ToDoItems.Where(i => i.Status == TodoStatus.Completed).ToList())"></FluentCardColumn>
-		</tr>
-		</tbody>
-	</table>
-	@if (EditId.HasValue)
-	{
-		<EditToDo
-			class="flex-shrink-1"
-			Id="@EditId"
-			ToDoItems="ToDoItems"
-			OnValidSubmit="Callback"
-		></EditToDo>
-	}
-</div>
+<ToDoComponent></ToDoComponent>

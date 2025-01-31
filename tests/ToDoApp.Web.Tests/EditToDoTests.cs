@@ -1,7 +1,7 @@
 ﻿using Bunit;
 using FluentAssertions;
 using ToDoApp.Shared;
-using ToDoApp.Web.Client.Pages.Components;
+using ToDoApp.SharedComponents.Components;
 
 namespace ToDoApp.Web.Tests;
 

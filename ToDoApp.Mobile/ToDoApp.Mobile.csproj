@@ -61,9 +61,20 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.3" />
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="$(MauiVersion)" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ToDoApp.SharedComponents\ToDoApp.SharedComponents.csproj" />
+      <ProjectReference Include="..\ToDoApp.Shared\ToDoApp.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Components\Pages\Components\EditToDo.razor" />
+      <AdditionalFiles Include="Components\Pages\Components\FluentCardColumn.razor" />
     </ItemGroup>
 
 </Project>

@@ -1,0 +1,29 @@
+@if (_todoItem == null) { <p>Loading...</p> }
+else
+{
+	<EditForm Model="_todoItem" OnValidSubmit="HandleValidSubmit" class="m-4 p-4 border rounded shadow bg-light">
+		<DataAnnotationsValidator/>
+		<ValidationSummary class="text-danger mb-3"/>
+
+		<div class="mb-3">
+			<label for="name" class="form-label">Name:</label>
+			<InputText id="name" @bind-Value="_todoItem.Name" class="form-control"/>
+		</div>
+
+		<div class="mb-3">
+			<label for="date" class="form-label">Date:</label>
+			<InputDate id="date" @bind-Value="_todoItem.Date" class="form-control"/>
+		</div>
+
+		<div class="mb-3">
+			<label for="status" class="form-label">Status:</label>
+			<InputSelect id="status" @bind-Value="_todoItem.StatusInt" class="form-select">
+				<option value="0">Not Started</option>
+				<option value="1">In Progress</option>
+				<option value="2">Completed</option>
+			</InputSelect>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Save</button>
+	</EditForm>
+}
