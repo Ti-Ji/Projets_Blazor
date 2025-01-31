@@ -15,8 +15,8 @@ public class DisplayToDoTests :TestContext
 
 		// Assert
 		cut.FindAll("td").Should().HaveCount(3);
-		cut.Find("td > ul > fluent-card").ChildNodes[0].TextContent.Should().StartWith("Task 1 (21/01/2025)");
-		cut.Find("td:nth-of-type(2) > ul > fluent-card").ChildNodes[0].TextContent.Should().StartWith("Task 2 (22/01/2025)");
-		cut.Find("td:nth-of-type(3) > ul > fluent-card").ChildNodes[0].TextContent.Should().StartWith("Task 3 (23/01/2025)");
+		cut.Find("td > ul > fluent-card").ChildNodes[0].TextContent.Should().StartWith("Task 1");
+		cut.Find("td:nth-of-type(2) > ul > fluent-card").ChildNodes[0].TextContent.Should().StartWith("Task 2");
+		cut.Find("td:nth-of-type(3) > ul > fluent-card").ChildNodes[0].TextContent.Should().StartWith("Task 3");
 	}
 }

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using ToDoApp.Shared;
 
-namespace ToDoApp.Web.Client.Pages.Components;
+namespace ToDoApp.Mobile.Components.Pages.Components;
 
 public partial class EditToDo
 {
