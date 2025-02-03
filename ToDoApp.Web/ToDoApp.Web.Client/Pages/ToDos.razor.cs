@@ -14,6 +14,12 @@ public partial class ToDos : ComponentBase
 		new ToDoItem { Id = 3, Name = "Task 3", Date = DateTime.Now.AddDays(2), Status = TodoStatus.Completed }
 	};
 
+	private void AddToDoItem()
+	{
+		EditId = 0;
+		StateHasChanged();
+	}
+
 	private void Callback(ToDoItem obj)
 	{
 		if (obj.Id == 0)

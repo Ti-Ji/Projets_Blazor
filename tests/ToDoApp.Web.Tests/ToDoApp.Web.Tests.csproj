@@ -8,10 +8,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="bunit" Version="1.38.5" />
-        <PackageReference Include="bunit.web" Version="1.38.5" />
+        <PackageReference Include="bunit" Version="1.38.5"/>
+        <PackageReference Include="bunit.web" Version="1.38.5"/>
         <PackageReference Include="coverlet.collector" Version="6.0.2"/>
-        <PackageReference Include="FluentAssertions" Version="8.0.0" />
+        <PackageReference Include="FluentAssertions" Version="8.0.0"/>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1"/>
         <PackageReference Include="xunit" Version="2.9.2"/>
         <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2"/>
@@ -22,8 +22,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\ToDoApp.Shared\ToDoApp.Shared.csproj" />
-      <ProjectReference Include="..\..\ToDoApp.Web\ToDoApp.Web.Client\ToDoApp.Web.Client.csproj" />
+        <ProjectReference Include="..\..\ToDoApp.Shared\ToDoApp.Shared.csproj"/>
+        <ProjectReference Include="..\..\ToDoApp.Web\ToDoApp.Web.Client\ToDoApp.Web.Client.csproj"/>
     </ItemGroup>
 
 </Project>

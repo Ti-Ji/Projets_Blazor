@@ -17,9 +17,9 @@ public partial class EditToDo
 
 	protected override void OnParametersSet()
 	{
-		_todoItem = Id.HasValue && ToDoItems != null && ToDoItems.Count != 0
+		_todoItem = Id is > 0 && ToDoItems != null && ToDoItems.Count != 0
 			? ToDoItems.FirstOrDefault(item => item.Id == Id)
-			: new ToDoItem();
+			: new ToDoItem { Id = 0 };
 	}
 
 	private async Task HandleValidSubmit()
