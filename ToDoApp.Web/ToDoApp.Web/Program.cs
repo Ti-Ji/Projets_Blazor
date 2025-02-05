@@ -10,6 +10,8 @@ builder.Services.AddRazorComponents().AddInteractiveServerComponents().AddIntera
 builder.Services.AddHttpClient();
 builder.Services.AddFluentUIComponents();
 
+builder.Services.AddHttpClient("ToDoApp.API", client => client.BaseAddress = new Uri("https://localhost:7008/"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
