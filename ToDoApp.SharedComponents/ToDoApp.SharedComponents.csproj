@@ -13,16 +13,16 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.1"/>
-        <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.3" />
+        <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.3"/>
     </ItemGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="Components\EditToDo.razor" />
-      <AdditionalFiles Include="Components\FluentCardColumn.razor" />
+        <AdditionalFiles Include="Components\EditToDo.razor"/>
+        <AdditionalFiles Include="Components\FluentCardColumn.razor"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ToDoApp.Shared\ToDoApp.Shared.csproj" />
+        <ProjectReference Include="..\ToDoApp.Shared\ToDoApp.Shared.csproj"/>
     </ItemGroup>
 
 </Project>

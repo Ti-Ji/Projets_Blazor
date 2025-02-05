@@ -21,10 +21,8 @@
 	private async Task TakePhoto()
 	{
 		PhotoBase64 = await CameraService.TakePhotoAsync();
-		if (string.IsNullOrEmpty(PhotoBase64))
-		{
-			Console.WriteLine("❌ No photo captured!");
-		}
+		if (string.IsNullOrEmpty(PhotoBase64)) { Console.WriteLine("❌ No photo captured!"); }
 	}
+
 }
 

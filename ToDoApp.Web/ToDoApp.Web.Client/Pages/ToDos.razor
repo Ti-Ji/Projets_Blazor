@@ -1,5 +1,39 @@
 @page "/ToDoList"
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
 
-<h3>ToDo List</h3>
+<AuthorizeView>
+	<Authorized>
+		<h3>ToDo List</h3>
+		<button class="btn btn-danger" @onclick="Logout">logout</button>
+		<ToDoComponent></ToDoComponent>
+	</Authorized>
+	<NotAuthorized>
+		<button class="btn btn-success" @onclick="Login">login</button>
+	</NotAuthorized>
+</AuthorizeView>
 
-<ToDoComponent></ToDoComponent>
+
+@code {
+	[CascadingParameter] private Task<AuthenticationState> authenticationStateTask { get; set; }
+	private void Logout()
+	{
+		var customAuthStateProvider = (CustomAuthenticationStateProvider)AuthenticationStateProvider;
+		customAuthStateProvider.NotifyUserLogout();
+	}
+	
+	private void Login()
+	{
+		var customAuthStateProvider = (CustomAuthenticationStateProvider)AuthenticationStateProvider;
+		// Create a dummy authenticated user
+		var identity = new ClaimsIdentity(
+		[
+			new Claim(ClaimTypes.Name, "username")
+		], "test authentication type");
+
+		var user = new ClaimsPrincipal(identity);
+		customAuthStateProvider.NotifyUserAuthentication(user);
+	}
+}

@@ -9,18 +9,19 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="9.0.1"/>
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.0"/>
-        <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.3" />
+        <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.3"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\ToDoApp.SharedComponents\ToDoApp.SharedComponents.csproj" />
+        <ProjectReference Include="..\..\ToDoApp.SharedComponents\ToDoApp.SharedComponents.csproj"/>
         <ProjectReference Include="..\..\ToDoApp.Shared\ToDoApp.Shared.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="Pages\Components\EditToDo.razor" />
-      <_ContentIncludedByDefault Remove="Pages\Components\FluentCardColumn.razor" />
+        <_ContentIncludedByDefault Remove="Pages\Components\EditToDo.razor"/>
+        <_ContentIncludedByDefault Remove="Pages\Components\FluentCardColumn.razor"/>
     </ItemGroup>
 
 </Project>

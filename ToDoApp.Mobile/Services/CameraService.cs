@@ -1,7 +1,4 @@
-using Microsoft.Maui.Media;
-
 namespace ToDoApp.Mobile.Services;
-using Microsoft.Maui.Media;
 
 public class CameraService
 {
@@ -19,15 +16,13 @@ public class CameraService
 					await stream.CopyToAsync(memoryStream);
 					var imageBytes = memoryStream.ToArray();
 					var base64Image = Convert.ToBase64String(imageBytes);
-                    
+
 					return $"data:image/jpeg;base64,{base64Image}"; // ✅ Base64 format for Blazor
 				}
 			}
 		}
-		catch (Exception ex)
-		{
-			Console.WriteLine($"❌ Error: {ex.Message}");
-		}
+		catch (Exception ex) { Console.WriteLine($"❌ Error: {ex.Message}"); }
+
 		return null;
 	}
 }

@@ -13,13 +13,13 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1"/>
         <PackageReference Include="Microsoft.Identity.Web" Version="3.0.0"/>
         <PackageReference Include="Microsoft.Identity.Web.DownstreamApi" Version="3.0.0"/>
-        <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="7.2.0" />
-        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.2.0" />
-        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.2.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="7.2.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.2.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.2.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ToDoApp.Shared\ToDoApp.Shared.csproj" />
+        <ProjectReference Include="..\ToDoApp.Shared\ToDoApp.Shared.csproj"/>
     </ItemGroup>
 
 </Project>

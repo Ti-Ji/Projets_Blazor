@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Identity.Web;
 using Microsoft.OpenApi.Models;
@@ -15,10 +14,7 @@ builder.Services.AddControllers();
 
 // Add Swagger services
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-	c.SwaggerDoc("v1", new OpenApiInfo { Title = "ToDoApp API", Version = "v1" });
-});
+builder.Services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "ToDoApp API", Version = "v1" }); });
 
 var app = builder.Build();
 
@@ -26,11 +22,12 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
-	app.UseSwaggerUI(c =>
-	{
-		c.SwaggerEndpoint("/swagger/v1/swagger.json", "ToDoApp API v1");
-		c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
-	});
+	app.UseSwaggerUI(
+		c =>
+		{
+			c.SwaggerEndpoint("/swagger/v1/swagger.json", "ToDoApp API v1");
+			c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
+		});
 }
 
 app.UseHttpsRedirection();
